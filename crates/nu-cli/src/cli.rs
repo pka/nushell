@@ -560,6 +560,7 @@ pub async fn cli() -> Result<(), Box<dyn Error>> {
             .map(|s| match s.value.expect_string() {
                 "list" => CompletionType::List,
                 "circular" => CompletionType::Circular,
+                "fuzzy" => CompletionType::Fuzzy,
                 _ => DEFAULT_COMPLETION_MODE,
             })
             .unwrap_or(DEFAULT_COMPLETION_MODE);
